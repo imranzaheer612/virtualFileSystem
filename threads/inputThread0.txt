@@ -1,0 +1,4 @@
+
+[+]Executing command by Thread: thread0 command number: 0 Command: mkfile file1.txt
+[+]Executing command by Thread: thread0 command number: 1 Command: write file1.txt "abcd"
+[+]Executing command by Thread: thread0 command number: 8 Command: write file3.txt "xyzfile 3"

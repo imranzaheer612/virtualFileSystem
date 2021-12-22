@@ -1,0 +1,215 @@
+[2021-12-22 16:54:46,409] : 
+[+]Executing command by Thread: thread4 command number: 10 Command: show
+[2021-12-22 16:54:46,410] : [+]showing the memory map  
+
+|-----------------------------
+|--> DIR_NAME: .
+|--> PATH: .
+|-----------------------------
+|--> DIR_NAME: __pycache__
+|--> PATH: ./__pycache__
+|-----------------------------
+|--> FILE_NAME: userMenu.cpython-39.pyc
+|--> PATH: ./__pycache__/userMenu.cpython-39.pyc
+|--> SIZE: 5978
+|--> DIR: ./__pycache__
+|-----------------------------
+|--> FILE_NAME: app.cpython-39.pyc
+|--> PATH: ./__pycache__/app.cpython-39.pyc
+|--> SIZE: 4626
+|--> DIR: ./__pycache__
+|-----------------------------
+|--> FILE_NAME: commandsThreading.cpython-39.pyc
+|--> PATH: ./__pycache__/commandsThreading.cpython-39.pyc
+|--> SIZE: 2758
+|--> DIR: ./__pycache__
+|-----------------------------
+|--> FILE_NAME: threading.cpython-39.pyc
+|--> PATH: ./__pycache__/threading.cpython-39.pyc
+|--> SIZE: 2616
+|--> DIR: ./__pycache__
+|-----------------------------
+|--> FILE_NAME: DirectoryTree.cpython-39.pyc
+|--> PATH: ./__pycache__/DirectoryTree.cpython-39.pyc
+|--> SIZE: 5296
+|--> DIR: ./__pycache__
+|-----------------------------
+|--> DIR_NAME: testFile
+|--> PATH: ./testFile
+|-----------------------------
+|--> DIR_NAME: sample_dir2
+|--> PATH: ./testFile/sample_dir2
+|-----------------------------
+|--> DIR_NAME: yaya
+|--> PATH: ./testFile/yaya
+|-----------------------------
+|--> FILE_NAME: sample_2.txt
+|--> PATH: ./testFile/yaya/sample_2.txt
+|--> SIZE: 0
+|--> DIR: ./testFile/yaya
+|-----------------------------
+|--> FILE_NAME: testfile.txt
+|--> PATH: ./testFile/yaya/testfile.txt
+|--> SIZE: 25
+|--> DIR: ./testFile/yaya
+|-----------------------------
+|--> DIR_NAME: sampledir
+|--> PATH: ./testFile/sampledir
+|-----------------------------
+|--> DIR_NAME: sample2
+|--> PATH: ./testFile/sampledir/sample2
+|-----------------------------
+|--> DIR_NAME: haha
+|--> PATH: ./testFile/sampledir/sample2/haha
+|-----------------------------
+|--> FILE_NAME: sample copy.txt
+|--> PATH: ./testFile/sampledir/sample2/haha/sample copy.txt
+|--> SIZE: 0
+|--> DIR: ./testFile/sampledir/sample2/haha
+|-----------------------------
+|--> FILE_NAME: sample.txt
+|--> PATH: ./testFile/sampledir/sample2/haha/sample.txt
+|--> SIZE: 0
+|--> DIR: ./testFile/sampledir/sample2/haha
+|-----------------------------
+|--> DIR_NAME: testingDir
+|--> PATH: ./testFile/testingDir
+|-----------------------------
+|--> DIR_NAME: new
+|--> PATH: ./testFile/testingDir/new
+|-----------------------------
+|--> DIR_NAME: tempDir
+|--> PATH: ./testFile/testingDir/tempDir
+|-----------------------------
+|--> FILE_NAME: random2.txt
+|--> PATH: ./testFile/random2.txt
+|--> SIZE: 0
+|--> DIR: ./testFile
+|-----------------------------
+|--> FILE_NAME: random.txt
+|--> PATH: ./testFile/random.txt
+|--> SIZE: 33
+|--> DIR: ./testFile
+|-----------------------------
+|--> FILE_NAME: random3.txt
+|--> PATH: ./testFile/random3.txt
+|--> SIZE: 0
+|--> DIR: ./testFile
+|-----------------------------
+|--> FILE_NAME: hahhahah.txt
+|--> PATH: ./testFile/hahhahah.txt
+|--> SIZE: 0
+|--> DIR: ./testFile
+|-----------------------------
+|--> FILE_NAME: random4.txt
+|--> PATH: ./testFile/random4.txt
+|--> SIZE: 0
+|--> DIR: ./testFile
+|-----------------------------
+|--> FILE_NAME: sample_24.txt
+|--> PATH: ./testFile/sample_24.txt
+|--> SIZE: 12
+|--> DIR: ./testFile
+|-----------------------------
+|--> DIR_NAME: threads
+|--> PATH: ./threads
+|-----------------------------
+|--> FILE_NAME: inputThread1.txt
+|--> PATH: ./threads/inputThread1.txt
+|--> SIZE: 248
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: outputThread3.txt
+|--> PATH: ./threads/outputThread3.txt
+|--> SIZE: 241
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: outputThread4.txt
+|--> PATH: ./threads/outputThread4.txt
+|--> SIZE: 102
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: inputThread0.txt
+|--> PATH: ./threads/inputThread0.txt
+|--> SIZE: 258
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: outputThread0.txt
+|--> PATH: ./threads/outputThread0.txt
+|--> SIZE: 672
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: outputThread2.txt
+|--> PATH: ./threads/outputThread2.txt
+|--> SIZE: 2613
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: inputThread3.txt
+|--> PATH: ./threads/inputThread3.txt
+|--> SIZE: 84
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: input_thread.txt
+|--> PATH: ./threads/input_thread.txt
+|--> SIZE: 169
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: inputThread2.txt
+|--> PATH: ./threads/inputThread2.txt
+|--> SIZE: 235
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: outputThread1.txt
+|--> PATH: ./threads/outputThread1.txt
+|--> SIZE: 1587
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: inputThread4.txt
+|--> PATH: ./threads/inputThread4.txt
+|--> SIZE: 73
+|--> DIR: ./threads
+|-----------------------------
+|--> FILE_NAME: DirectoryTree.py
+|--> PATH: ./DirectoryTree.py
+|--> SIZE: 7016
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: readme.txt
+|--> PATH: ./readme.txt
+|--> SIZE: 153
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: commandsThreading.py
+|--> PATH: ./commandsThreading.py
+|--> SIZE: 4437
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: app.py
+|--> PATH: ./app.py
+|--> SIZE: 4734
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: userMenu.py
+|--> PATH: ./userMenu.py
+|--> SIZE: 8018
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: file3.txt
+|--> PATH: ./file3.txt
+|--> SIZE: 0
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: tempCodeRunnerFile.py
+|--> PATH: ./tempCodeRunnerFile.py
+|--> SIZE: 13
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: file1.txt
+|--> PATH: ./file1.txt
+|--> SIZE: 0
+|--> DIR: .
+|-----------------------------
+|--> FILE_NAME: file2.txt
+|--> PATH: ./file2.txt
+|--> SIZE: 0
+|--> DIR: .

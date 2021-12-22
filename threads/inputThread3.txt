@@ -1,0 +1,4 @@
+
+[+]Executing command by Thread: thread3 command number: 6 Command: ls
+[+]Executing command by Thread: thread3 command number: 7 Command: mkfile file3.txt
+[+]Executing command by Thread: thread3 command number: 9 Command: ls

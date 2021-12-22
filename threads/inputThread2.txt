@@ -1,0 +1,2 @@
+
+[+]Executing command by Thread: thread2 command number: 5 Command: write file1.txt "xyz"

@@ -1,0 +1,4 @@
+
+[+]Executing command by Thread: thread1 command number: 2 Command: mkfile file2.txt
+[+]Executing command by Thread: thread1 command number: 3 Command: ls
+[+]Executing command by Thread: thread1 command number: 4 Command: write file2.txt "123"

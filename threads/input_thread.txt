@@ -1,0 +1,11 @@
+mkfile file1.txt
+write file1.txt "abcd"
+mkfile file2.txt
+ls
+write file2.txt "123"
+write file1.txt "xyz"
+ls
+mkfile file3.txt
+write file3.txt "xyzfile 3"
+ls
+show
