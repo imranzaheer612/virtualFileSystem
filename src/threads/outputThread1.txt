@@ -1,0 +1,26 @@
+[2021-12-28 18:23:31,237] : [+]listing the directory structure successfull 
+
+<-- Printing Scanned Dirs -->
+ testFile
+|-- sample_dir2
+|-- yaya
+|--|-- sample_2.txt
+|--|-- testfile.txt
+|-- sampledir
+|--|-- sample2
+|--|--|-- haha
+|--|--|--|-- sample copy.txt
+|--|--|--|-- sample.txt
+|-- testingDir
+|--|-- new
+|--|-- tempDir
+|-- random2.txt
+|-- random.txt
+|-- random3.txt
+|-- hahhahah.txt
+|-- random4.txt
+|-- client2.txt
+|-- sample_24.txt
+
+<-- End -->
+

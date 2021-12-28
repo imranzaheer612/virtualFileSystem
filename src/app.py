@@ -15,8 +15,6 @@ import math
 
 
 
-
-
 ##
 # TEST CASES
 # #
@@ -152,9 +150,9 @@ class FileSystemFunctions:
         self.tree.changeDir(dir_path)
         self.tree.root = self.tree.loc
         # global self.currentPath 
-        print("path before: ", self.currentPath)
+        # print("path before: ", self.currentPath)
         self.currentPath = os.path.join(self.currentPath, dir_path)
-        print("path changed: ", self.currentPath)
+        # print("path changed: ", self.currentPath)
 
     def getDataStructure(self):
         return self.tree

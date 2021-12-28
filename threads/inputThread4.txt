@@ -1,2 +1,0 @@
-
-[+]Executing command by Thread: thread4 command number: 10 Command: show
