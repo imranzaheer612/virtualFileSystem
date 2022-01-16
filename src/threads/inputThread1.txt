@@ -1,3 +1,0 @@
-
-Executing command: ls
-Executing command: q

@@ -1,6 +1,14 @@
+from distutils import command
 from DirectoryTree import DirectoryTree
 from app import FileSystemFunctions
-import logging
+import os, pathlib
+from pathlib import Path
+
+
+
+absolute_path = Path().absolute()
+tempResultFile = os.path.join(absolute_path, "threads/tempResult.txt")
+helpFile = os.path.join(absolute_path, "threads/help.txt")
 
 
 class Executor:
@@ -9,30 +17,17 @@ class Executor:
         self.appMethods =  FileSystemFunctions()
         self.tree = DirectoryTree(None)
         self.tree = self.appMethods.getDataStructure()
-        self.appMethods.changeDir("testFile")
+        self.appMethods.changeDir("testingDir")
         self.currentDirName = self.tree.root.dir.name
+        self.currentDirPath = self.tree.root.dir.path
         # self.commandThreads = CommandThreading()
 
 
 
     # helper method to display help 
     def display_help(self):
-        help = "Commands:"
-        help += "\n    mkfile <filename>              - Make a file"
-        help += "\n    rm    <filename>               - Remove file"
-        help += "\n    mkdir <dirname>                - Make a directory"
-        help += "\n    cd    <dirname>                - Change directory"
-        help += "\n    write <filename> <string> ...  - Write string to file"
-        help += "\n    writeat <filename> <point> <string> ...- Write string to file at specific point"
-        help += "\n    append <filename> <string> ... - Append string to file"
-        help += "\n    truncate <filename> <size> ... - Truncates the file to given size"
-        help += "\n    read <filename>                - Read contents of file"
-        help += "\n    readfrom <filename> <point> <size>...- Reads the file from given point"
-        help += "\n    movewithin <filename> <from> <to> <size> ...- Move the given size content from one to other point within the file"
-        help += "\n    show                           - Show memory of root directory"
-        help += "\n    ls                             - Show self.tree of current directory"
-        help += "\n     thread_commands <no of threads>  - excute all commands in threads "
-        help += "\n    close                          - Save and Quit"
+        file = open(helpFile, "r")
+        help = file.read()
         return help
 
 
@@ -128,9 +123,13 @@ class Executor:
                 try:
                     self.appMethods.changeDir(commands[1])
                     self.currentDirName = self.tree.root.dir.name
+                    self.currentDirPath = self.tree.root.dir.path
                     log = "[+]chaning to dir " + commands[1]
                 except Exception as e:
                     log = "[-]an error occurred while changing to dir " + commands[1] + "\nError: "  + str(e)
+
+            elif commands[0] == "pwd" and len(commands) == 1:
+                log = self.currentDirPath
 
             elif commands[0] == "ls":
                 try:
@@ -155,9 +154,10 @@ class Executor:
                 log = "Wrong command: {" + commands[0] + "}, type \"help\" for more information";
             
             logger.debug(log)
-            log_file = open("result.txt","w")
+            log_file = open(tempResultFile,"w")
             log_file.write(log)
             log_file.close
+            # print(log)
 
 
 

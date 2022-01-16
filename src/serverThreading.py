@@ -1,8 +1,10 @@
+import os
 from threading import Lock, Thread
 from execution import Executor
 import logging
 import socket
-
+from pathlib import Path
+import os
 
 
 executor = Executor()
@@ -11,11 +13,17 @@ thread_being_runned = 0
 port = 1234
 
 
+absolute_path = Path().absolute()
+tempResultFile = os.path.join(absolute_path, "threads/tempResult.txt")
+# tempResultFile = os.path.relpath(absolute_path)
+# tempResultFile = pathlib.Path().resolve()
+# tempResultFile = os.path.join(tempResultFile, "/threads/tempResult.txt")
 
-##
+
+
+#
 # make a new socket for each client
 #  #
-
 def readyServer():
     global port, thread_being_runned
 
@@ -28,7 +36,7 @@ def readyServer():
     print("port: ", port)
     s.bind(('', port))
     print()
-    print('[!]Waiting for connection')
+    print('[!]Waiting for new client')
     print()
 
     s.listen(1)
@@ -57,19 +65,14 @@ def serveNewClient(conn, addr):
     formatter = logging.Formatter('[%(asctime)s] : %(message)s')
 
     # output log file per thread
-    outputFile = "threads/outputThread" + str(thread_being_runned) + ".txt"
+    outputFile = "threads/outputClient" + str(thread_being_runned) + ".txt"
     fileHandler = logging.FileHandler(outputFile, mode='w')
     fileHandler.setFormatter(formatter)
     logger.setLevel(logging.DEBUG)
     logger.addHandler(fileHandler)
 
-    try:
-        open("result.txt","x")
-    except Exception as e:
-        print()
-
     #inputfile
-    file_name = "threads/inputThread" + str(thread_being_runned) + ".txt"
+    file_name = "threads/inputClient" + str(thread_being_runned) + ".txt"
     inputFile = open(file_name, 'w')
 
     while 1:
@@ -77,16 +80,16 @@ def serveNewClient(conn, addr):
         incoming_message = conn.recv(5000)
         incoming_message = incoming_message.decode()
         inputFile.write("\nExecuting command: " + incoming_message)
-        if (incoming_message == 'q'):
+        if (incoming_message == 'close'):
             break
 
         my_commands = incoming_message.split(" ")
         executor.execCommand(my_commands, logger)
 
         lock.acquire()
-        log_file = open("result.txt","r")
+        log_file = open(tempResultFile,"r")
         message = log_file.read()
-        message += "\n[Current Dir]: " + executor.currentDirName
+        # message += "\n[Current Dir]: " + executor.currentDirName
         log_file.close
         lock.release()
 

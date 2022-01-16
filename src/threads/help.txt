@@ -1,0 +1,16 @@
+Commands:
+
+mkfile      <filename>       - Make a file"
+rm          <filename>       - Remove file"
+mkdir       <dirname>        - Make a directory"
+cd          <dirname>        - Change directory"
+write       <filename> <string>             - Write string to file"
+writeat     <filename> <point> <string>     - Write string to file at specific point"
+append      <filename> <string>             - Append string to file"
+truncate    <filename> <size>               - Truncates the file to given size"
+read        <filename>                      - Read contents of file"
+readfrom    <filename> <point> <size>       - Reads the file from given point"
+movewithin  <filename> <from> <to> <size>   - Move the given size content from one to other point within the file"
+show            - Show memory of root directory"
+ls              - Show self.tree of current directory"
+close           - Save and Quit"

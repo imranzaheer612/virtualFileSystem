@@ -1,8 +1,9 @@
-[2021-12-28 18:23:31,237] : [+]listing the directory structure successfull 
+[2022-01-16 23:06:29,164] : [+]listing the directory structure successfull 
 
 <-- Printing Scanned Dirs -->
- testFile
+ testingDir
 |-- sample_dir2
+|--|-- temp_sampl.txt
 |-- yaya
 |--|-- sample_2.txt
 |--|-- testfile.txt
@@ -24,3 +25,4 @@
 
 <-- End -->
 
+[2022-01-16 23:06:31,716] : ./testingDir

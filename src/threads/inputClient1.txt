@@ -1,0 +1,4 @@
+
+Executing command: ls
+Executing command: pwd
+Executing command: close

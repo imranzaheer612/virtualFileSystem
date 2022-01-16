@@ -11,10 +11,10 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = "127.0.0.1"
 port = 1234
 s.connect((host, port))
-print('[+]Connected to chat server')
+print('[+]Connected to file server')
 while 1:
     message = input(str('>> '))
-    if (message == 'q'):
+    if (message == 'close'):
         message = message.encode()
         s.send(message)
         break

@@ -29,12 +29,15 @@ class DirectoryTree:
 
     def __init__(self, curDirNode) :
         self.root = Node()
+        self.deepRoot = Node()
         self.root.dir = curDirNode
+        self.deepRoot = curDirNode
         # self.currentNode = self.root
         self.loc = self.root
         self.preloc = None
         self.tree_str = ""
         self.memory_map_str = ""
+
 
     def addNode(self, data, check=0):
         # if file then simply add to current dir
@@ -61,7 +64,7 @@ class DirectoryTree:
                 print("[-]canont find dir: ", parent)
   
 
-    ##
+    #
     # while finding the dir and sub_dir
     # we have to change the directory that have been
     # scanned
@@ -69,6 +72,13 @@ class DirectoryTree:
     # #
     def changeDir(self, dir_path):
         self.loc = self.root
+        self.recursiveDirSearch(dir_path)
+
+    #
+    # used in going back to previous node
+    # #
+    def searchFromRoot(self, dir_path):
+        self.loc = self.deepRoot
         self.recursiveDirSearch(dir_path)
 
     def recursiveDirSearch(self, dir_path):
@@ -91,6 +101,7 @@ class DirectoryTree:
         for node in self.loc.children:
             if (node.dir):
                 if (node.dir.name == reqPath):
+                    self.preloc = self.loc
                     self.loc = node
                     if ((len(path) == 0) and (node.dir.name == dir_name)):
                         found = True

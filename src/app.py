@@ -1,3 +1,4 @@
+from time import time
 from DirectoryTree import File, Dir, DirectoryTree
 
 from pathlib import Path
@@ -44,6 +45,13 @@ class FileSystemFunctions:
 
         node = self.tree.openFile(os.path.join(file_path))
         full_file_path = os.path.join(self.currentPath, file_path)
+
+        # busy waiting
+        while(node.file.protection):
+            pass
+        
+        #apply protection
+        node.file.protection = True
         if (mode == 'w' ):
             fileWrite = open(full_file_path, 'w')
         
@@ -53,23 +61,49 @@ class FileSystemFunctions:
         fileWrite.write(text)
         fileWrite.close
         node.file.size = os.path.getsize(full_file_path)
+        
+        #remove protection
+        node.file.protection = False
+        
 
     def write_at_file(self, file_name, text, location):
+        
         file_node = self.tree.openFile(file_name)
+        # busy waiting
+        while(file_node.file.protection):
+            pass
+        
+        #apply protection
+        file_node.file.protection = True
+
+        #operations
         fileWrite = open(file_node.file.path, 'r+')
         fileWrite.seek(location, 0)
         fileWrite.write(text)
         fileWrite.close
 
+        #remove protection
+        file_node.file.protection = False
+
 
     def read_file(self, file_name):
         file_node = self.tree.openFile(os.path.join(self.currentPath, file_name))
+        
+        # busy waiting
+        while(file_node.file.protection):
+            pass
+        
         fileRead = open(file_node.file.path, 'r')
         return fileRead.read()
 
 
     def read_from_file(self, file_name, location, size):
         file_node = self.tree.openFile(file_name)
+
+        # busy waiting
+        while(file_node.file.protection):
+            pass
+
         fileRead = open(file_node.file.path)
         fileRead.seek(location)
         return fileRead.read(size)
@@ -77,6 +111,11 @@ class FileSystemFunctions:
 
     def file_truncate(self, file_name, size):
         file_node = self.tree.openFile(file_name)
+
+        # busy waiting
+        while(file_node.file.protection):
+            pass
+
         file_path = os.path.join(self.currentPath, file_name)
         fileTrun = open(file_path, 'a')
         fileTrun.truncate(size)
@@ -88,6 +127,13 @@ class FileSystemFunctions:
         tempFile = open("tempFile.txt","w+")
 
         file_node = self.tree.openFile(file_name)
+        
+        # busy waiting
+        while(file_node.file.protection):
+            pass
+        
+        #apply protection and start processes
+        file_node.file.protection = True
         openedFile = open(file_node.file.path, 'r+')
 
         tempFile.write(openedFile.read())
@@ -117,10 +163,17 @@ class FileSystemFunctions:
         tempFile.close
         openedFile.close
 
+        #remove protection
+        file_node.file.protection = False
+
 
 
     def moveFile(self, file_path, dir_path):
         file_node = self.tree.openFile(os.path.join(self.currentPath, file_path))
+
+        # busy waiting
+        while(file_node.file.protection):
+            pass
 
         # disconnect node from current parent
         self.tree.preloc.children.remove(file_node)
@@ -134,6 +187,11 @@ class FileSystemFunctions:
 
     def remove_file(self, file_path):
         node = self.tree.openFile(file_path)
+
+        # busy waiting
+        while(node.file.protection):
+            pass
+
         self.tree.preloc.children.remove(node)
         # print("path recieved: ", file_path)
         os.remove(file_path)
@@ -147,11 +205,17 @@ class FileSystemFunctions:
 
 
     def changeDir(self, dir_path):
-        self.tree.changeDir(dir_path)
-        self.tree.root = self.tree.loc
+        if (dir_path == ".."):
+            self.tree.searchFromRoot(self.currentPath)
+            self.tree.root = self.tree.preloc
+
+        else:     
+            self.tree.changeDir(dir_path)
+            self.tree.root = self.tree.loc
         # global self.currentPath 
         # print("path before: ", self.currentPath)
-        self.currentPath = os.path.join(self.currentPath, dir_path)
+        # self.currentPath = os.path.join(self.currentPath, dir_path)
+        self.currentPath = self.tree.root.dir.path
         # print("path changed: ", self.currentPath)
 
     def getDataStructure(self):
