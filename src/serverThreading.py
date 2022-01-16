@@ -94,8 +94,15 @@ def serveNewClient(conn, addr):
         lock.release()
 
         message = message.encode()
-        conn.send(message)
         inputFile.close()
+
+        # close connection if client crashes unexpectedly
+        try:
+            conn.send(message)
+        except socket.error:
+            conn.close()
+            break
+
 
 
 

@@ -1,1 +1,2 @@
-[2022-01-16 23:19:24,507] : ./testingDir
+[2022-01-16 23:46:39,411] : Wrong command: {}, type "help" for more information
+[2022-01-16 23:46:39,413] : Wrong command: {}, type "help" for more information

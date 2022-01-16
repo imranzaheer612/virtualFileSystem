@@ -1,4 +1,4 @@
 
-Executing command: ls
+Executing command: help
 Executing command: 
 Executing command: 

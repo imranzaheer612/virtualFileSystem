@@ -1,3 +1,29 @@
-[2022-01-16 23:19:27,418] : ./testingDir
-[2022-01-16 23:20:01,443] : Wrong command: {}, type "help" for more information
-[2022-01-16 23:20:01,444] : Wrong command: {}, type "help" for more information
+[2022-01-16 23:46:33,683] : [+]listing the directory structure successfull 
+
+<-- Printing Scanned Dirs -->
+ testingDir
+|-- sample_dir2
+|--|-- temp_sampl.txt
+|-- yaya
+|--|-- sample_2.txt
+|--|-- testfile.txt
+|-- sampledir
+|--|-- sample2
+|--|--|-- haha
+|--|--|--|-- sample copy.txt
+|--|--|--|-- sample.txt
+|-- testingDir
+|--|-- new
+|--|-- tempDir
+|-- random2.txt
+|-- random.txt
+|-- random3.txt
+|-- hahhahah.txt
+|-- random4.txt
+|-- client2.txt
+|-- sample_24.txt
+
+<-- End -->
+
+[2022-01-16 23:46:34,608] : Wrong command: {}, type "help" for more information
+[2022-01-16 23:46:34,609] : Wrong command: {}, type "help" for more information

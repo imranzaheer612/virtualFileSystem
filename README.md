@@ -37,6 +37,6 @@ git clone https://github.com/imranzaheer612/virtualFileSystem.git
 This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 
-![Sample output!](samplePics/sampleOutput.png "Sample out put")
+![Sample output!](samplePics/clientHelp.png "Sample out put")
 
 
