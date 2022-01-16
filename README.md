@@ -2,30 +2,41 @@
 
 Multi threaded file system implementation in python
 
-## Run for multi threading 
+## Description
 
-Run the commandsThreading.py to execute commmands as threads from the **threads/inputthread.txt** 
+Multi threaded filesystem server is implemented in python. Multiple clients can be connected at a time.
 
-- this multi threaded system will allocates the commands to the threads
+## Getting Started
 
-- **outputThread<x>.txt** will be generated
-- where x is number of thread
-- It includes the output of specific thread
+### Dependencies
 
+* python3
+* Linux
 
-## Run for single user
+### Installing and Running
 
-Run the userMenu.py commands to manually give commands
-
-- This will allow user to enter commands manually and perform operations
-- NOTE: please uncomment the last two lines of code in userMenu.py in oder to run it for single user
-
-``sampleUser = UserRequest();
-sampleUser.userInput()``
+* Clone the repo
+```
+git clone https://github.com/imranzaheer612/virtualFileSystem.git
+```
+* simply run the serverThreading.py on the server end
 
 <br>
-<br>
 
-![Sample output!](sampleOutput.png "Sample out put")
+![Sample output!](samplePics/serverWaiting.png "Sample out put")
+
+
+* Then start the clients. client.py contains the code for the client end
+
+
+![Sample output!](samplePics/multiClients.png "Sample out put")
+
+
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+
+![Sample output!](samplePics/sampleOutput.png "Sample out put")
 
 

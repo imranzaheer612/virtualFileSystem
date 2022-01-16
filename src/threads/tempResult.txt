@@ -1,1 +1,1 @@
-./testingDir
+Wrong command: {}, type "help" for more information
